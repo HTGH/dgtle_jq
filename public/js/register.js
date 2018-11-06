@@ -10,7 +10,7 @@ uname.onblur = function () {
     var that = this;
     $.ajax({
       type: 'POST',
-      url:"http://101.200.33.195:3000/register/check_uname",
+      url:"https://dgtlej.rrcj123.com/register/check_uname",
       data:{uname: that.value},
       success: function (result) {
         if (result.code === 201) {
@@ -84,7 +84,7 @@ email.onblur = function () {
     var that = this;
     $.ajax({
       type: 'POST',
-      url:"http://101.200.33.195:3000/register/check_email",
+      url:"https://dgtlej.rrcj123.com/register/check_email",
       data: {email: that.value},
       success: function (result) {
         if (result.code === 201) {
@@ -111,7 +111,7 @@ phone.onblur = function () {
     var that = this;
     $.ajax({
       type: 'POST',
-      url:"http://101.200.33.195:3000/register/check_phone",
+      url:"https://dgtlej.rrcj123.com/register/check_phone",
       data: {phone: that.value},
       success: function (result) {
         if (result.code === 201) {
@@ -143,7 +143,7 @@ $('#bt-register').click(function () {
     $.ajax({
         type: 'POST',
         //url: '../data/user/register.php',
-        url:"http://101.200.33.195:3000/register/check_register",
+        url:"https://dgtlej.rrcj123.com/register/check_register",
         data: $('#form-register').serialize(),
         success: function(result){
           if(result.code===200){

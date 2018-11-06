@@ -29,7 +29,7 @@ app.all('*', function(req, res, next) {
     res.header("X-Powered-By",'3.2.1');
     res.header("Content-Type", "application/json;charset=utf-8");
     //设为指定的域
-    res.header('Access-Control-Allow-Origin', "http://127.0.0.1:8181");
+    res.header('Access-Control-Allow-Origin', "*");
     //设置Access-Control-Allow-Credentials为true
     res.header('Access-Control-Allow-Credentials', true);
     next();

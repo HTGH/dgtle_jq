@@ -3,7 +3,7 @@ function loadPhonelist(a){
     var span1=$(a).children()[0].innerHTML;
     var span2=$(a).children()[1].innerHTML;
     $.ajax({
-        url: "http://101.200.33.195:3000/shanyhs/phonelist",
+        url: "https://dgtlej.rrcj123.com/shanyhs/phonelist",
         type: "get",
         data: {span1,span2},
         dataType: "json",
@@ -57,7 +57,7 @@ $(function(){
     function loadPage(kw,pno=0) {
         // if(location.search.indexOf("kw=")!=-1){
         $.ajax({
-            url: "http://101.200.33.195:3000/shanyhs/pno",
+            url: "https://dgtlej.rrcj123.com/shanyhs/pno",
             type: "get",
             data: {kw,pno},
             dataType: "json",
@@ -126,5 +126,5 @@ $(".content-list-brand").hover(
     },
     function(){$(this).children(".content-item").hide()}
 )
-//测试: http://101.200.33.195:3000/index.html->F12
+//测试: https://dgtlej.rrcj123.com/index.html->F12
 //结果:[{},{},{},{},{},{}]

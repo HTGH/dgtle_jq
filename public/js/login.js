@@ -28,11 +28,11 @@ $('#bt-login').click(function () {
   var data = $('#form-login').serialize();
   $.ajax({
     type: 'POST',
-    url: 'http://101.200.33.195:3000/login/signin',
+    url: 'https://dgtlej.rrcj123.com/login/signin',
     data: data,
     success: function (result) {
       if (result.code === 200) {              //登录成功
-        var pageToJump = result.pageToJump?result.pageToJump:'http://101.200.33.195:3000/index.html';
+        var pageToJump = result.pageToJump?result.pageToJump:'https://dgtlej.rrcj123.com/index.html';
         location.href = pageToJump;
       } else if (result.code === 201) {       //登录失败
         alertMsg('<b>登录失败！</b><p>原因：' + result.msg + '</p>');
